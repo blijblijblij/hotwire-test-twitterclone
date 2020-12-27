@@ -82,10 +82,12 @@ GEM
     ffi (1.14.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    hotwire-rails (0.1.1)
+    hotwire-rails (0.1.0)
+      hotwire-stimulus-rails
       rails (>= 6.0.0)
-      stimulus-rails
       turbo-rails
+    hotwire-stimulus-rails (0.1.0)
+      rails (>= 6.0.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.1)
@@ -114,8 +116,6 @@ GEM
     puma (5.1.1)
       nio4r (~> 2.0)
     rack (2.2.3)
-    rack-proxy (0.6.5)
-      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.1.0)
@@ -164,7 +164,6 @@ GEM
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
-    semantic_range (2.3.1)
     spring (2.1.1)
     sprockets (4.0.2)
       concurrent-ruby (~> 1.0)
@@ -173,15 +172,10 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stimulus-rails (0.1.1)
-      rails (>= 6.0.0)
     thor (1.0.1)
     tilt (2.0.10)
-    turbo-rails (0.5.1)
+    turbo-rails (0.5.0)
       rails (>= 6.0.0)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     web-console (4.1.0)
@@ -193,11 +187,6 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (>= 3.0, < 4.0)
-    webpacker (5.2.1)
-      activesupport (>= 5.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 5.2)
-      semantic_range (>= 2.3.0)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -212,21 +201,19 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
-  hotwire-rails (~> 0.1.1)
+  hotwire-rails (~> 0.1.0)
   jbuilder (~> 2.7)
   listen (~> 3.3)
-  pg
+  pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 6.1.0)
   redis (~> 4.0)
   sass-rails (>= 6)
   selenium-webdriver
   spring
-  turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
-  webpacker (~> 5.0)
 
 RUBY VERSION
    ruby 2.7.2p137
